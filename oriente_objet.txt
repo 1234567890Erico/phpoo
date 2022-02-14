@@ -1,0 +1,21 @@
+Orienté Objet :
+
+
+
+Inconvénients :
+
+    - Techniquement, on ne peut rien faire de plus avec l'orienté objet qu'avec le procédural
+    - En général, l'approche orienté objet est moins intuitive pour l'esprit humain
+    - Lègére perte de performance
+
+Avantages : 
+
+    - Code générique, modulariser afin d'avoir un code évolutif
+    - Encourager le travail collaboratif
+    - Masquer la complexité du code grâce au principe d'encapsulation
+    - possibilité de documenter son code
+    - Réutilisation, on ne repart jamais de zéro, effectuer un code type pouvant être repris sur d'autre projets
+    - Simplifier la maintenance / mise à jour ( tout se passe dans la classe en question)
+    - Assouplir le code, factoriser le code, meilleur conceptualisation
+    - Plus d'options dans le languages (héritage, surcharge, abstraction, finalisation, traits etc ...)
+    - Cela vous permettra de passer plus facilement à d'autre technologies : .net, c++, java etc...
