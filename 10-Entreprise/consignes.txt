@@ -1,0 +1,23 @@
+
+                                    Entreprise
+
+Le directeur de l'entreprise vous demande de créer une application permettant à son service secrétariat de pouvoir gérer l'ensemble des employés de l'entreprise.
+
+Fonctionnalité désirer par le directeur :
+Depuis l'application :
+
+    - pouvoir afficher l'ensemble des employés de l'Entreprise
+    - pouvoir créer un nouvel employé                       Create
+    - consulter les informations d'un employé               Read
+    - mettre à jour les informations d'un employé           Update  
+    - supprimer un employé                                  Delete 
+
+Architecture MVC :
+
+    dossier : app 
+    dossier : controller
+    dossier : model
+    dossier : view
+
+    fichier : index.php
+    fichier : autoload.php
