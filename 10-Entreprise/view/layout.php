@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background: #7952B3;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Entreprise</a>
+            <a class="navbar-brand" href="http://localhost/phpoo/10-Entreprise/">Entreprise</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -22,10 +22,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                        <a class="nav-link active" aria-current="page" href="http://localhost/phpoo/10-Entreprise/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Ajouter un employé</a>
+                        <a class="nav-link" href="?op=add">Create</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -39,12 +39,23 @@
     <h2 class="text-center mt-4"><?= $title; ?></h2>
     <div class="alert alert-info text-center" role="alert"><?= $message; ?></div>
 
-    <div class="container mt-4 mb-4" style="min-height: 730px;">
+    <?php
+        if(!empty($alert))
+        {
+            // Affichage de la variable $alert si elle contient une alert
+            echo '<div class="alert alert-success text-center">';
+            echo $alert;
+            echo '</div>';
+        }
+    ?>
+
+    <div class="container mt-4 mb-4" style="min-height: 630px;">
+        <!-- affichage des templates stockés dans la variable $content définit dans la méthode render() du Controller -->
         <?= $content; ?>
     </div>
 
 
-    <footer class="jumbotron" style="min-height: 80px; background: #7952B3;">
+    <footer class="jumbotron" style="min-height: 60px; background: #7952B3;">
 
     </footer>
 

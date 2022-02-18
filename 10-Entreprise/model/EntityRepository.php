@@ -62,6 +62,28 @@ class EntityRepository
         return array_slice($r,1);
     }
 
+    // Méthode permettant de sélectionner un employé dans la Base de données en fonction de son ID
+    public function selectEntityRepo($id)
+    {
+        $data = $this->getDb()->query("SELECT * FROM " . $this->table . " WHERE id_" . $this->table . " = " . $id);
+        $r = $data->fetch(\PDO::FETCH_ASSOC);
+        return $r;
+    }
+
+    // Méthode permettant de supprimer un employé de la Base de données en fonction de son ID
+    public function deleteEntityRepo($id)
+    {
+        $q = $this->getDb()->query('DELETE FROM ' . $this->table . ' WHERE id_' . $this->table . ' = ' . $id);
+    }
+
+    // Méthode permettant d'ajouter ou de modifier un employé dans la base de données en fonction son ID
+    public function saveEntityRepo()
+    {
+        $id = isset($_GET['id']) ? $_GET['id'] : 'NULL';
+        $q = $this->getDb()->query('REPLACE INTO ' . $this->table . '(id_' . $this->table . ',' . implode(',', array_keys($_POST)) . ') VALUES (' . $id . ',' . "'" . implode("','", $_POST) . "'" . ')');
+    }
+
+
 }
 
 // TEST

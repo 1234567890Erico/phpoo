@@ -21,7 +21,7 @@ echo '<pre>'; print_r($fields); echo '</pre>'; ?> -->
                 <td><?= implode('</td><td>', $dataEmploye); ?></td>
                 <td><a href="?op=select&id=<?= $dataEmploye[$id] ?>" class="btn btn-success"><i class="fas fa-eye"></i></a></td>
                 <td><a href="?op=update&id=<?= $dataEmploye[$id] ?>" class="btn btn-primary"><i class="far fa-edit"></i></a></td>
-                <td><a href="?op=delete&id=<?= $dataEmploye[$id] ?>" class="btn btn-danger"><i class="far fa-trash-alt"></i></a></td>
+                <td><a href="?op=delete&id=<?= $dataEmploye[$id] ?>" class="btn btn-danger" onclick="return(confirm('Vous êtes sur le point de supprimer cet employé. En êtes vous certain ?'))"><i class="far fa-trash-alt"></i></a></td>
             </tr>
         <?php endforeach; ?>
     </tbody>
