@@ -69,6 +69,8 @@ class Controller
         $this->render('layout.php', 'affichage-employes.php', [
             'title' => 'Affichage de tous les employes',
             'data' => $this->dbEntityRepository->selectAllEntityRepo(),
+            'fields' => $this->dbEntityRepository->getFields(),
+            'id' => 'id_' . $this->dbEntityRepository->table,
             'message' => "Ci-dessous vous trouverez un tableau contenant l'ensemble des employés de l'entreprise"
         ]);
     }

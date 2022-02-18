@@ -53,6 +53,15 @@ class EntityRepository
         $r = $data->fetchAll(\PDO::FETCH_ASSOC);
         return $r;
     }
+
+    // Méthode permettant de sélectionner tout les noms des champs de la table "employes"
+    public function getFields()
+    {
+        $data = $this->getDb()->query("DESC " . $this->table);
+        $r = $data->fetchAll(\PDO::FETCH_ASSOC);
+        return array_slice($r,1);
+    }
+
 }
 
 // TEST

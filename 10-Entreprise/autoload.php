@@ -21,7 +21,7 @@ spl_autoload_register(array('Autoload', 'inclusionAuto'));
 
 // TEST
 
-// $c = new controller\Controller;
+$c = new controller\Controller;
 
 // echo __FILE__ . '<br>';
 // echo __DIR__;
